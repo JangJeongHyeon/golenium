@@ -4,11 +4,13 @@ import (
 	"log"
 	"time"
 
+	"github.com/LoveAndCode/golenium/chromeservice"
+
 	"github.com/fedesog/webdriver"
 )
 
 func main() {
-	service := webdriver.NewChromeDriver("./assets/chromedriver.exe")
+	service := chromeservice.GetNewChromeDriverService()
 	err := service.Start()
 
 	if err != nil {
